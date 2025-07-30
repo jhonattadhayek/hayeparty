@@ -16,7 +16,7 @@ const terminalLines = [
   '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━',
   '',
   '⚡ CODINOME: THE HAYEK PARTY',
-  '📅 DATA: 02/07/2024',
+  '📅 DATA: 02/08/2024',
   '🕓 HORÁRIO: 16:00 HORAS',
   '📍 LOCAL: Salgueiro - Clube',
   '🎧 ATRAÇÃO: DJ TOM',

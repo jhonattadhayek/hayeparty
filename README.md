@@ -175,7 +175,7 @@ npm run lint     # Linting do código
 
 - **Nome**: THE HAYEK PARTY
 - **Aniversariante**: Jhon Hayek
-- **Data**: 02/07
+- **Data**: 02/08
 - **Horário**: 16:00h
 - **Local**: Salgueiro - Clube
 - **DJ**: DJ TOM

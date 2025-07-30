@@ -4,21 +4,21 @@ import React from 'react'
 
 export const metadata: Metadata = {
   title: 'THE HAYEK PARTY',
-  description: 'Convite interativo para o aniversário de Jhon Hayek - 02/07 às 16h',
+  description: 'Convite interativo para o aniversário de Jhon Hayek - 02/08 às 16h',
   keywords: ['festa', 'aniversário', 'jhon hayek', 'cyberpunk', 'hacker'],
   authors: [{ name: 'Hayek Party Team' }],
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#8B5CF6',
   openGraph: {
     title: 'THE HAYEK PARTY',
-    description: 'Você foi convocado para uma missão especial - 02/07 às 16h',
+    description: 'Você foi convocado para uma missão especial - 02/08 às 16h',
     type: 'website',
     locale: 'pt_BR',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'THE HAYEK PARTY',
-    description: 'Você foi convocado para uma missão especial - 02/07 às 16h',
+    description: 'Você foi convocado para uma missão especial - 02/08 às 16h',
   }
 }
 

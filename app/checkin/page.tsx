@@ -130,7 +130,7 @@ export default function CheckinPage() {
             </div>
             <div className="text-sm space-y-1">
               <div>THE HAYEK PARTY</div>
-              <div>02/07 • 16:00h • Salgueiro</div>
+              <div>02/08 • 16:00h • Salgueiro</div>
               <div>DJ TOM comandando a pista</div>
             </div>
           </div>

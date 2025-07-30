@@ -103,7 +103,7 @@ export default function BilhetePage() {
             🎟️ BILHETE DIGITAL
           </h1>
           <div className="text-sm text-gray-400 mt-2">
-            THE HAYEK PARTY • 02/07 • 16H
+            THE HAYEK PARTY • 02/08 • 16H
           </div>
         </div>
 
@@ -183,7 +183,7 @@ export default function BilhetePage() {
             </a>
             <button
               onClick={() => {
-                const text = `Confirmei presença no THE HAYEK PARTY! 🎉\n02/07 às 16h no Salgueiro\n\n${window.location.href}`
+                const text = `Confirmei presença no THE HAYEK PARTY! 🎉\n02/08 às 16h no Salgueiro\n\n${window.location.href}`
                 navigator.share ? 
                   navigator.share({ title: 'THE HAYEK PARTY', text, url: window.location.href }) :
                   navigator.clipboard.writeText(text)

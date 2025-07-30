@@ -12,7 +12,7 @@ Site interativo de convite para o aniversário de **JHON HAYEK** com estética h
 |------|----------|
 | **Nome da Festa** | THE HAYEK PARTY |
 | **Aniversariante** | Jhon Hayek |
-| **Data** | 02/07 |
+| **Data** | 02/08 |
 | **Horário** | 16h |
 | **Local** | Salgueiro - Clube (a definir) |
 | **Atração** | DJ TOM |
