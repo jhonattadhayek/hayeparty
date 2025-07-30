@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-purple: #8B5CF6;
+  --neon-green: #10B981;
+  --cyber-dark: #0A0A0A;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Share Tech Mono', monospace;
+  background-color: var(--cyber-dark);
+  color: white;
+}
+
+body {
+  background-image: 
+    linear-gradient(rgba(139, 92, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 246, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  min-height: 100vh;
+}
+
+/* Terminal Cursor */
+.terminal-cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: var(--neon-purple);
+}
+
+/* Neon Text Effect */
+.neon-text {
+  color: var(--neon-purple);
+  text-shadow: 
+    0 0 5px var(--neon-purple),
+    0 0 10px var(--neon-purple),
+    0 0 15px var(--neon-purple);
+}
+
+/* Neon Border Effect */
+.neon-border {
+  border: 1px solid var(--neon-purple);
+  box-shadow: 
+    0 0 5px var(--neon-purple),
+    inset 0 0 5px rgba(139, 92, 246, 0.1);
+}
+
+/* QR Code Container - Melhorado */
+.qr-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 
+    0 4px 6px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.qr-container img {
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.3s infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.3s infinite;
+  color: #00ffff;
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0%, 14%, 15%, 49%, 50%, 99%, 100% {
+    transform: translate(0px, 0px) skew(0deg);
+  }
+  1%, 13% {
+    transform: translate(-2px, 1px) skew(-2deg);
+  }
+  16%, 48% {
+    transform: translate(1px, -1px) skew(2deg);
+  }
+  51%, 98% {
+    transform: translate(-1px, 2px) skew(-1deg);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 20%, 21%, 62%, 63%, 100% {
+    transform: translate(0px, 0px) skew(0deg);
+  }
+  1%, 19% {
+    transform: translate(2px, -1px) skew(2deg);
+  }
+  22%, 61% {
+    transform: translate(-2px, 1px) skew(-2deg);
+  }
+  64%, 99% {
+    transform: translate(1px, -2px) skew(1deg);
+  }
+}
+
+/* Scrollbar customizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cyber-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--neon-purple);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A855F7;
+}
+
+/* Loading Animation */
+.loading-dots {
+  display: inline-block;
+}
+
+.loading-dots::after {
+  content: '';
+  animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
+/* Fade In Animation */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+/* Print Styles - Melhorado */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+  }
+  
+  /* Esconder elementos não necessários na impressão */
+  .no-print {
+    display: none !important;
+  }
+  
+  .neon-border {
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
+  }
+  
+  .bg-black, .bg-cyber-dark {
+    background: white !important;
+  }
+  
+  .text-neon-purple, .text-neon-green, .text-neon-blue {
+    color: black !important;
+    text-shadow: none !important;
+  }
+  
+  .text-gray-400, .text-gray-300, .text-gray-500 {
+    color: #666 !important;
+  }
+  
+  /* QR Code na impressão */
+  .qr-container {
+    background: white !important;
+    border: 2px solid #000 !important;
+    box-shadow: none !important;
+    margin: 20px auto !important;
+  }
+  
+  /* Melhorar contraste para impressão */
+  .border-yellow-500 {
+    border-color: #000 !important;
+  }
+  
+  .text-yellow-500 {
+    color: #000 !important;
+    font-weight: bold !important;
+  }
+  
+  .border-neon-green {
+    border-color: #000 !important;
+  }
+  
+  .text-neon-green {
+    color: #000 !important;
+    font-weight: bold !important;
+  }
+  
+  /* Ajustar tamanhos para impressão */
+  .min-h-screen {
+    min-height: auto !important;
+  }
+  
+  /* Quebra de página se necessário */
+  .print-break {
+    page-break-after: always;
+  }
+} 
